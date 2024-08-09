@@ -1,0 +1,33 @@
+﻿<!-- Tiedosto: MainWindow.xaml -->
+
+<Window x:Class="PintaAlaLaskuri.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pinta-ala Laskuri" Height="585" Width="383" Background="#f0f8ff">
+    <Grid Margin="10">
+        <StackPanel>
+            <!-- Syötekentät ja ohjetekstit -->
+            <TextBlock FontSize="16" FontWeight="Bold" Margin="0,0,0,10"><Run Text="Syötä ikkunan mitat "/><Run Language="fi-fi" Text="millimetrein"/><Run Text=":"/></TextBlock>
+
+            <TextBlock Text="Leveys:" />
+            <TextBox Name="LeveysTextBox" Margin="0,5"/>
+
+            <TextBlock Text="Korkeus:" />
+            <TextBox Name="KorkeusTextBox" Margin="0,5"/>
+
+            <TextBlock Text="Karmin leveys:" />
+            <TextBox Name="KarmiTextBox" Margin="0,5"/>
+
+            <Button Name="LaskeButton" Content="Laske" Click="LaskeButton_Click" Background="#4caf50" Foreground="White" FontWeight="Bold" Margin="0,10,0,0" Width="100" HorizontalAlignment="Center"/>
+
+            <!-- Tulosten näyttö -->
+            <TextBlock Text="Tulokset:" FontSize="16" FontWeight="Bold" Margin="0,10,0,5"/>
+            <TextBlock Name="IkkunaPintaAlaTextBlock" Text="Ikkunan pinta-ala: " />
+            <TextBlock Name="LasiPintaAlaTextBlock" Text="Lasin pinta-ala: " />
+            <TextBlock Name="KarminPiiriTextBlock" Text="Karmin piiri: " />
+
+            <!-- Canvas ikkunan piirtämiseen -->
+            <Canvas Name="IkkunaCanvas" Width="350" Height="200" Background="White" Margin="0,10,0,0" />
+        </StackPanel>
+    </Grid>
+</Window>
