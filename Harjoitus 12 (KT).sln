@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus 12 (KT)", "Harjoitus 12 (KT)\Harjoitus 12 (KT).csproj", "{2CE87FEB-E0D9-4A51-992C-6E7DFB91FFF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Harjoitus 12 (KT)", "Harjoitus 12 (KT)\Harjoitus 12 (KT).csproj", "{2CE87FEB-E0D9-4A51-992C-6E7DFB91FFF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus 13 (KT)", "Harjoitus 13 (KT)\Harjoitus 13 (KT).csproj", "{005B381E-291A-4950-AA1E-E617F677C88E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus 18 (KT)", "Harjoitus 18 (KT)\Harjoitus 18 (KT).csproj", "{CC585CF7-2BCD-44BD-B64A-7A9D81AE2E4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{2CE87FEB-E0D9-4A51-992C-6E7DFB91FFF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CE87FEB-E0D9-4A51-992C-6E7DFB91FFF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CE87FEB-E0D9-4A51-992C-6E7DFB91FFF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{005B381E-291A-4950-AA1E-E617F677C88E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{005B381E-291A-4950-AA1E-E617F677C88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{005B381E-291A-4950-AA1E-E617F677C88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{005B381E-291A-4950-AA1E-E617F677C88E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC585CF7-2BCD-44BD-B64A-7A9D81AE2E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC585CF7-2BCD-44BD-B64A-7A9D81AE2E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC585CF7-2BCD-44BD-B64A-7A9D81AE2E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC585CF7-2BCD-44BD-B64A-7A9D81AE2E4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

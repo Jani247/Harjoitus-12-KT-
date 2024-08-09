@@ -1,0 +1,25 @@
+﻿<!-- Tiedosto: MainWindow.xaml -->
+
+<Window x:Class="WpfLaskin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Laskin" Height="350" Width="300">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Syötä ensimmäinen luku:" Margin="0,0,0,5"/>
+            <TextBox Name="FirstNumberTextBox" Margin="0,0,0,10"/>
+            <TextBlock Text="Syötä toinen luku:" Margin="0,0,0,5"/>
+            <TextBox Name="SecondNumberTextBox" Margin="0,0,0,10"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                <Button Name="SumButton" Content="Summa" Click="SumButton_Click" Width="60" Margin="5"/>
+                <Button Name="SubtractButton" Content="Erotus" Click="SubtractButton_Click" Width="60" Margin="5" Height="51"/>
+                <Button Name="MultiplyButton" Content="Kertolasku" Click="MultiplyButton_Click" Width="80" Margin="5"/>
+                <Button Name="DivideButton" Content="Jakolasku" Click="DivideButton_Click" Width="70" Margin="5"/>
+            </StackPanel>
+
+            <TextBlock Margin="0,0,0,5"><Run Language="fi-fi" Text="Vastauksesi on:"/></TextBlock>
+            <TextBox Name="ResultTextBox" IsReadOnly="True" TextChanged="ResultTextBox_TextChanged"/>
+        </StackPanel>
+    </Grid>
+</Window>

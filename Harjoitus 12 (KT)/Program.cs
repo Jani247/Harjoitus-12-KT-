@@ -7,7 +7,7 @@ namespace Korttipeli
 {
     class Korttipakka
     {
-        // Ominaisuus korttien tallentamiseen
+        // Ominaisuus korttien tallentamista varten
         private List<string> kortit;
 
         // Konstruktorit
@@ -41,7 +41,7 @@ namespace Korttipeli
             }
         }
 
-        // Metodi korttien sekoittamiseen
+        // Metodi korttien sekoittamist varten
         public void SekoitaKortit()
         {
             Random rng = new Random();
@@ -57,7 +57,7 @@ namespace Korttipeli
             Console.WriteLine("Korttipakka on sekoitettu");
         }
     }
-
+        //tulostus
     class Program
     {
         static void Main(string[] args)
