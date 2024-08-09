@@ -1,0 +1,29 @@
+﻿<!-- Tiedosto: MainWindow.xaml -->
+
+<Window x:Class="OstosApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ostoskärry" Height="400" Width="300" Background=" #ffbde4">
+    <Grid Margin="10">
+        <StackPanel>
+            <!-- Otsikko tekstikentille -->
+            <TextBlock Text="Valitse tuotteet:" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <!-- CheckBox kontrollit eri tuotteille -->
+            <CheckBox Name="CheckBoxApple" Content="Omena" Checked="ProductCheckBox_Checked" Unchecked="ProductCheckBox_Unchecked" Margin="0,5"/>
+            <CheckBox Name="CheckBoxBanana" Content="Banaani" Checked="ProductCheckBox_Checked" Unchecked="ProductCheckBox_Unchecked" Margin="0,5"/>
+            <CheckBox Name="CheckBoxOrange" Content="Appelsiini" Checked="ProductCheckBox_Checked" Unchecked="ProductCheckBox_Unchecked" Margin="0,5"/>
+            <CheckBox Name="CheckBoxGrapes" Content="Rypäleet" Checked="ProductCheckBox_Checked" Unchecked="ProductCheckBox_Unchecked" Margin="0,5"/>
+            <CheckBox Name="CheckBoxMango" Content="Mango" Checked="ProductCheckBox_Checked" Unchecked="ProductCheckBox_Unchecked" Margin="0,5"/>
+
+            <!-- Otsikko ostoskärrylle -->
+            <TextBlock Text="Ostoskärry:" FontSize="16" FontWeight="Bold" Margin="0,10,0,5"/>
+
+            <!-- TextBox, joka näyttää valitut tuotteet ja mahdollistaa vierityksen -->
+            <TextBox Name="CartTextBox" Background="#e6e6fa" Padding="5" Height="100" IsReadOnly="True" VerticalScrollBarVisibility="Auto"/>
+
+            <!-- Osta-nappi -->
+            <Button Name="BuyButton" Content="Osta" Click="BuyButton_Click" Background="#ff6347" Foreground="White" FontWeight="Bold" Margin="0,10,0,0" Width="100" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>
