@@ -1,0 +1,63 @@
+﻿<!-- MainWindow.xaml on tämän WPF-sovelluksen graafinen käyttöliittymä, elikkäs (UI)
+ se sisältää XAML-koodia, joka kuvaa tän käyttöliittymän rakenteen esim nää ikkunat, nappulat,
+    tekstikentät ja muut käyttöliittymä komponentit jotka tähän myös kuuluu. Löytyy Button, TextBox ja ListBox
+    funktioita, jne.
+    -->
+
+<Window x:Class="TaskApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TaskApp"
+        Title="Tehtävien Hallinta" Height="500" Width="600" Background="#4f5d79">
+
+    <!-- Resurssiosio, jossa määritellään konvertoija -->
+    <Window.Resources>
+        <!-- Määritellään konvertoija resursseihin -->
+        <local:EmptyTextToVisibilityConverter x:Key="EmptyTextToVisibilityConverter"/>
+    </Window.Resources>
+
+    <Grid Margin="10">
+        <StackPanel>
+            <!-- otsikko -->
+            <TextBlock Text="Kalenterin merkkaus" FontSize="20" FontWeight="Bold" Margin="0,0,0,20" TextAlignment="Center"/>
+
+            <!-- Tehtävälista -->
+            <ListBox Name="TaskListBox" Height="200" Margin="0,0,0,10"/>
+
+            <!-- Tehtävien syötekentät -->
+            <StackPanel Orientation="Horizontal">
+                <Grid>
+                    <!-- Otsikon tekstikenttä -->
+                    <TextBox Name="TitleTextBox" Width="150" Margin="0,0,10,0"/>
+                    <TextBlock Text="Otsikko" Foreground="Gray" IsHitTestVisible="False" Margin="5,2,0,0"
+                               Visibility="{Binding Text, ElementName=TitleTextBox, Converter={StaticResource EmptyTextToVisibilityConverter}}"/>
+                </Grid>
+
+                <Grid>
+                    <!-- Kuvauksen tekstikenttä -->
+                    <TextBox Name="DescriptionTextBox" Width="200" Margin="0,0,10,0"/>
+                    <TextBlock Text="Kuvaus" Foreground="Gray" IsHitTestVisible="False" Margin="5,2,0,0"
+                               Visibility="{Binding Text, ElementName=DescriptionTextBox, Converter={StaticResource EmptyTextToVisibilityConverter}}"/>
+                </Grid>
+
+                <!-- Valitse päivämääräsi -->
+                <DatePicker Name="DueDatePicker" Width="120" Margin="0,0,10,0"/>
+
+                <!-- Valitse kuinka tärkeä prioriteettisi on -->
+                <ComboBox Name="PriorityComboBox" Width="100" SelectionChanged="PriorityComboBox_SelectionChanged">
+                    <ComboBoxItem Content="Valitse prioriteetti" IsEnabled="False" Foreground="Green"/>
+                    <ComboBoxItem Content="Matala" />
+                    <ComboBoxItem Content="Normaali" />
+                    <ComboBoxItem Content="Kiireinen" />
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Toiminto painikkeet -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                <Button Name="AddTaskButton" Content="Lisää Tehtävä" Click="AddTaskButton_Click" Width="120" Margin="10,0"/>
+                <Button Name="RemoveTaskButton" Content="Poista Tehtävä" Click="RemoveTaskButton_Click" Width="120" Margin="10,0"/>
+                <Button Name="SaveTasksButton" Content="Tallenna Tehtävät" Click="SaveTasksButton_Click" Width="120" Margin="10,0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
